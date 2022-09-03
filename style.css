@@ -3,11 +3,11 @@
 :root {
     /*primary*/
     --p-dark-cyan: hsl(158, 36%, 37%, 1);
-    --p-cream: hsl(30, 38%, 92%, 1);
+    --p-cream: hsl(30, 30%, 86%, 1);
     /*neutral*/
     --n-very-dark-blue: hsl(212, 21%, 14%, 1);
     --n-dark-grayish-blue: hsl(228, 12%, 48%, 1);
-    --n-white: hsl(0, 0%, 100%, 1);
+    --n-white: hsl(0, 0%, 100%, 0.60);
 }
 *{
     margin: 0;
@@ -23,6 +23,7 @@ body{
     flex-direction: column;
     width: 100%;
     min-height: 100vh;
+    position: relative;
 }
 .main_container{
     width: 600px;
@@ -101,18 +102,23 @@ body{
     cursor: pointer;
 }
 .buy_button span{
-    color: var(--n-white);
+    color: white;
     margin: 5px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: 14px;
 }
+.attribution{
+    position: absolute;
+    bottom: 0;
+}
+
 
 /* RESPONSIVE QUERY */
 @media screen and (max-width:650px) {
     .main_container{
-        width: 300px;
-        height: 600px;
+        width: 290px;
+        height: 550px;
         display: flex;
         flex-direction: column;
     }
@@ -131,12 +137,13 @@ body{
     .main_container .info_container{
         width: 100%;
         height: 60%;
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: space-between;
-        padding: 30px;
+        padding: 20px;
+    }
+    .main_container .info_container p{
+        font-size: 12px;   
+    }
+    .main_container .info_container h1{
+        font-size: 26px;
     }
     
 }
