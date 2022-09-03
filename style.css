@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500;700&display=swap');
+
+:root {
+    /*primary*/
+    --p-dark-cyan: hsl(158, 36%, 37%, 1);
+    --p-cream: hsl(30, 38%, 92%, 1);
+    /*neutral*/
+    --n-very-dark-blue: hsl(212, 21%, 14%, 1);
+    --n-dark-grayish-blue: hsl(228, 12%, 48%, 1);
+    --n-white: hsl(0, 0%, 100%, 1);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body{
+    background-color: var(--p-cream);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+}
+.main_container{
+    width: 600px;
+    height: 445px;
+    background: var(--n-white);
+    border-radius: 10px;
+    display: flex;
+}
+.main_container .img_container{
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 10px 0px 0px 10px;
+}
+.main_container .img_container img{
+    width: 100%;
+    height: 100%;
+}
+.main_container .info_container{
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 30px;
+}
+.main_container .info_container p{
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    color: var(--n-dark-grayish-blue);    
+}
+.main_container .info_container h1{
+    font-family: 'Fraunces', serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 31px;
+    color: var(--n-very-dark-blue);
+}
+.info_container .price_container{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.info_container .price_container h1{
+    color: var(--p-dark-cyan);
+}
+.info_container .price_container p{
+    text-decoration-line: line-through;
+    margin-left: 20px;
+}
+.info_container .buy_button{
+    border-style: none;
+    background-color: var(--p-dark-cyan);
+    border-radius: 10px;
+    width: 100%;
+    height: 47px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.info_container .buy_button:hover{
+    background: #1A3C2F;
+    cursor: pointer;
+}
+.buy_button span{
+    color: var(--n-white);
+    margin: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+}
